@@ -8,9 +8,9 @@ namespace Colas_FIFO
 {
     class CPU
     {
-        private Random rdn;
-        Proceso inicio = null, newProceso;
-        private int colaVacia = 0, proAtendidos = 0, proPendientes = 0, TTotal=0;
+        private Random rdn = new Random();
+        Proceso inicio = null;
+        private int colaVacia = 0, proAtendidos = 0, proPendientes = 0, TTotal=0, faltantes=0;
         //-------------------------------------------------------------------
         public void agregar(Proceso nuevo)
         {
@@ -26,7 +26,6 @@ namespace Colas_FIFO
             else
             {
                 quien.sig = nuevo;
-                TTotal += nuevo.Tiempo;
             }
         }
 
@@ -34,35 +33,30 @@ namespace Colas_FIFO
         //---------------------------------------------------------------------
         public void start()
         {
-            addProcess();
             for(int i = 0; i < 300; i++)
             {
                 if (probabilidad())
                 {
-                    addProcess();
+                    agregar(new Proceso(rdn.Next(4,15)));
+                    TTotal++;
                 }
-
-                if (inicio.Tiempo != 0)
+                if (inicio != null)
                 {
                     inicio.Tiempo -= 1;
+                    if (inicio.Tiempo == 0)
+                    {
+                        inicio = inicio.sig;
+                        proAtendidos++;
+                    }
                 }
                 else
                 {
-                    proAtendidos++;
-                    ifIsNullTime();
+                    colaVacia++;
                 }
-                pendientes();
             }
-        }
-        //---------------------------------------------------------------------
-        private void ifIsNullTime()
-        {
-            if (inicio.sig != null)
-            {
-                inicio = inicio.sig;
-            }
-            else
-                colaVacia++;
+            pendientes();
+            CiclosPendientes();
+            
         }
         //---------------------------------------------------------------------
         private void pendientes()
@@ -70,24 +64,23 @@ namespace Colas_FIFO
             proPendientes = TTotal - proAtendidos;
         }
         //---------------------------------------------------------------------
+        public void CiclosPendientes()
+        {
+            Proceso actual = inicio;
+            while (actual != null)
+            {
+                faltantes += actual.Tiempo;
+                actual = actual.sig;
+            }
+        }
+        //---------------------------------------------------------------------
         public bool probabilidad()
         {
-            int proba = 0;
-            rdn = new Random();
-            proba = rdn.Next(1, 101);
-            if (proba < 35)
+            int proba = rdn.Next(1, 101);
+            if (proba <= 35)
                 return true;
             else
                 return false;
-        }
-        //---------------------------------------------------------------------
-        public void addProcess()
-        {
-            rdn = new Random();
-            int time = rdn.Next(4, 15);
-            newProceso = new Proceso(time);
-            agregar(newProceso);
-            TTotal ++;
         }
         //-----------------------------------RETORNAR VALORES---------------------
         public string retornaTotales()
@@ -108,6 +101,11 @@ namespace Colas_FIFO
         public string retornaPendientes()
         {
             string pendientes = proPendientes.ToString();
+            return pendientes;
+        }
+        public string retornaTiempoPendientes()
+        {
+            string pendientes = faltantes.ToString();
             return pendientes;
         }
         //--------------------------------------------------------------------------

@@ -27,6 +27,7 @@ namespace Colas_FIFO
             lblPendientes.Text = cpu.retornaPendientes();
             lblProcesos.Text = cpu.retornaTotales();
             lblCiclos.Text = cpu.retornaVacias();
+            lblPend.Text = cpu.retornaTiempoPendientes();
             for(int i=0; i<300; i++)
             {
                 if (timer())
@@ -53,6 +54,7 @@ namespace Colas_FIFO
             lblCiclos.Text = "";
             lblPendientes.Text = "";
             lblProcesos.Text = "";
+            lblPend.Text = "";
         }
     }
 }

@@ -39,6 +39,8 @@
             this.lblAtendidos = new System.Windows.Forms.Label();
             this.lblPendientes = new System.Windows.Forms.Label();
             this.lblCiclos = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lblPend = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -153,11 +155,33 @@
             this.lblCiclos.TabIndex = 13;
             this.lblCiclos.Text = "--";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Lucida Console", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(15, 319);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(248, 24);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Ciclos Pendientes";
+            // 
+            // lblPend
+            // 
+            this.lblPend.AutoSize = true;
+            this.lblPend.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPend.Location = new System.Drawing.Point(302, 324);
+            this.lblPend.Name = "lblPend";
+            this.lblPend.Size = new System.Drawing.Size(31, 19);
+            this.lblPend.TabIndex = 15;
+            this.lblPend.Text = "--";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(372, 381);
+            this.Controls.Add(this.lblPend);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.lblCiclos);
             this.Controls.Add(this.lblPendientes);
             this.Controls.Add(this.lblAtendidos);
@@ -171,7 +195,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Intel Atom n3600 1 GHz";
+            this.Text = "Kaike LightSpeed 2K 2.5 GHz";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -190,6 +214,8 @@
         private System.Windows.Forms.Label lblAtendidos;
         private System.Windows.Forms.Label lblPendientes;
         private System.Windows.Forms.Label lblCiclos;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblPend;
     }
 }
 

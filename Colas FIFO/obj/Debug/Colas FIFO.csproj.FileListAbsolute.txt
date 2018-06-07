@@ -8,3 +8,13 @@ C:\Users\JoséEnrique\source\repos\Colas FIFO\Colas FIFO\obj\Debug\Colas FIFO.cs
 C:\Users\JoséEnrique\source\repos\Colas FIFO\Colas FIFO\obj\Debug\Colas FIFO.csproj.CoreCompileInputs.cache
 C:\Users\JoséEnrique\source\repos\Colas FIFO\Colas FIFO\obj\Debug\Colas FIFO.exe
 C:\Users\JoséEnrique\source\repos\Colas FIFO\Colas FIFO\obj\Debug\Colas FIFO.pdb
+C:\Users\20132792\Desktop\Colas-FIFO-master\Colas FIFO\bin\Debug\Colas FIFO.exe.config
+C:\Users\20132792\Desktop\Colas-FIFO-master\Colas FIFO\bin\Debug\Colas FIFO.exe
+C:\Users\20132792\Desktop\Colas-FIFO-master\Colas FIFO\bin\Debug\Colas FIFO.pdb
+C:\Users\20132792\Desktop\Colas-FIFO-master\Colas FIFO\obj\Debug\Colas FIFO.csprojResolveAssemblyReference.cache
+C:\Users\20132792\Desktop\Colas-FIFO-master\Colas FIFO\obj\Debug\Colas_FIFO.Form1.resources
+C:\Users\20132792\Desktop\Colas-FIFO-master\Colas FIFO\obj\Debug\Colas_FIFO.Properties.Resources.resources
+C:\Users\20132792\Desktop\Colas-FIFO-master\Colas FIFO\obj\Debug\Colas FIFO.csproj.GenerateResource.Cache
+C:\Users\20132792\Desktop\Colas-FIFO-master\Colas FIFO\obj\Debug\Colas FIFO.csproj.CoreCompileInputs.cache
+C:\Users\20132792\Desktop\Colas-FIFO-master\Colas FIFO\obj\Debug\Colas FIFO.exe
+C:\Users\20132792\Desktop\Colas-FIFO-master\Colas FIFO\obj\Debug\Colas FIFO.pdb
